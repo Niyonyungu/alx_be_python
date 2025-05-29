@@ -36,9 +36,55 @@
 #     print("Not eligible for loan")
 
 # chain comparasion
-age = 22  
-if 18 <= age < 65:
-    print("You are an adult.")
+# age = 22  
+# if 18 <= age < 65:
+#     print("You are an adult.")
 
-#Quiz
+# Match case
+
+# day = input("Enter a day of the week (Monday-Sunday): ").lower()
+
+# match day:
+#     case "monday":
+#         print("Ugh, Mondays...")
+#     case "tuesday":
+#         print("Just another workday...")
+#     case "wednesday":
+#         print("Hump day!")
+#     case "thursday":
+#         print("Almost there...")
+#     case "friday":
+#         print("TGIF!")
+#     case "saturday" | "sunday":  # Match multiple values with pipe (|)
+#         print("Weekend vibes!")
+#     case _:
+#          print("Invalid day entered.")
+
+# user_input = input("Enter a value (number or string): ")
+
+# try:
+#     value = int(user_input)
+# except ValueError:
+#     value = user_input
+
+# match value:
+#     case int():
+#         print("You entered an integer:", value)
+#     case str():
+#         print("You entered a string:", value)
+#     case _:
+#         print("Unknown type.")
+
+
+
+# age = int(input("Enter your age: "))
+
+# match age:
+#     case 18 | 19:  # Match multiple values with pipe (|)
+#         if age >= 18 and has_id(user):  # Guard using a function call
+#             print("You are eligible to vote.")
+#         else:
+#             print("You need a valid ID to vote.")
+#     case _:
+#         print("You are not yet eligible to vote.")
 
