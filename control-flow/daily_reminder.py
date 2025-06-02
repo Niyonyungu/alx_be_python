@@ -22,4 +22,4 @@ if Time_Bound == "yes":
 
 # Print the final reminder
 print("\n🔔 Daily Reminder 🔔")
-print(message)
+print(f"Reminder: {message}")
