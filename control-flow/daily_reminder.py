@@ -8,13 +8,13 @@ Time_Bound = input("Is it time-bound? (yes/no): ").lower()
 # Customized reminder based on Priority and time sensitivity
 match Priority:
     case "high":
-        message = f"🔴 HIGH Priority: Don't forget to {Task}."
+        message = f"HIGH Priority: Don't forget to {Task}."
     case "medium":
-        message = f"🟠 MEDIUM Priority: Try to complete {Task} today."
+        message = f"MEDIUM Priority: Try to complete {Task} today."
     case "low":
-        message = f"🟢 LOW Priority: You can do {Task} when you have free time."
+        message = f"LOW Priority: You can do {Task} when you have free time."
     case _:
-        message = f"⚠️ Unknown Priority level for the Task: {Task}."
+        message = f"Unknown Priority level for the Task: {Task}."
 
 # Add urgency if the Task is time-bound
 if Time_Bound == "yes":
