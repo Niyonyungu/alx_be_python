@@ -34,16 +34,22 @@ def main():
             if choice not in ["1", "2"]:
                 print("Invalid choice. Please enter 1, 2, or 3.")
                 continue
-            
-            temp_str = input("Enter the temperature: ")
+            temp_str = input("Enter the temperature to convert: ")
             temperature = get_valid_temperature(temp_str)
             
-            if choice == "1":
-                converted = convert_to_fahrenheit(temperature)
-                print(f"{temperature}°C is equal to {converted:.2f}°F")
+            unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").upper()
+            while unit not in ['C', 'F']:
+                print("Invalid input. Please enter 'C' for Celsius or 'F' for Fahrenheit.")
+                unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").upper()
+            
+            if (unit == 'C' and choice == "1") or (unit == 'F' and choice == "2"):
+                converted = convert_to_fahrenheit(temperature) if unit == 'C' else convert_to_celsius(temperature)
+                out_unit = '°F' if unit == 'C' else '°C'
+                print(f"{temperature}°{unit} is equal to {converted:.2f}{out_unit}")
             else:
-                converted = convert_to_celsius(temperature)
-                print(f"{temperature}°F is equal to {converted:.2f}°C")
+                print(f"You selected to convert from {'Celsius to Fahrenheit' if choice == '1' else 'Fahrenheit to Celsius'}")
+                print(f"but entered a temperature in {'Fahrenheit' if unit == 'F' else 'Celsius'}.")
+                print("Please try again with the correct temperature unit.")
                 
         except ValueError as e:
             print(f"Error: {e}")
