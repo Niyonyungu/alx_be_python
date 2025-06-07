@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-"""
-Script for exploring datetime operations in Python
-"""
+
 from datetime import datetime, timedelta
 
 def display_current_datetime():
