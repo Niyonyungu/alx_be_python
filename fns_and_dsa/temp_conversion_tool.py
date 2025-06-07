@@ -4,11 +4,11 @@ CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
 
 def convert_to_celsius(fahrenheit):
     """Convert Fahrenheit temperature to Celsius."""
-    return FAHRENHEIT_TO_CELSIUS_FACTOR * (fahrenheit - 32)
+    return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
 
 def convert_to_fahrenheit(celsius):
     """Convert Celsius temperature to Fahrenheit."""
-    return (CELSIUS_TO_FAHRENHEIT_FACTOR * celsius) + 32
+    return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
 def get_valid_temperature(temp_str):
     """Validate and convert temperature input to float."""
